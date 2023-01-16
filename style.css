@@ -1,0 +1,19 @@
+body {
+  --color--accent: #2A9D8F;
+
+  font: 20px sans-serif;
+  margin: 1em;
+}
+
+.wrapper {
+  max-width: 35em;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+}
+
+a {
+  color: var(--color--accent);
+}

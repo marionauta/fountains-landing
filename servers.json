@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Sevilla, Andalucía, España",
+        "address": "https://api.fountains.nachbaur.dev/sevilla"
+    },
+    {
+        "name": "Córdoba, Andalucía, España",
+        "address": "https://api.fountains.nachbaur.dev/cordoba"
+    },
+    {
+        "name": "Madrid, Comunidad de Madrid, España",
+        "address": "https://api.fountains.nachbaur.dev/madrid"
+    },
+    {
+        "name": "Barcelona, Cataluña, España",
+        "address": "https://api.fountains.nachbaur.dev/barcelona"
+    }
+]
