@@ -1,25 +1,91 @@
 <!DOCTYPE html>
-<html lang=en>
+<html lang=es_ES>
 
 <head>
   <meta charset=utf-8>
   <meta name=viewport content="width=device-width, initial-scale=1.0">
   <title>AguApp &mdash; Encuentra fuentes en tu ciudad</title>
+  <link href=/assets/icon.png rel=icon>
   <link rel=stylesheet href=/style.css>
+  <meta name=author content="Mario Nachbaur Riscos">
+  <meta name=keywords content="Fuentes, Agua, Mapa, Beber, Ciudad">
+  <meta name=description content="AguApp es una aplicación gratuita que te ayudará a encontrar fuentes en tu ciudad.">
+  <meta name=twitter:card content=summary>
+  <meta name=twitter:creator content=@marionauta>
+  <meta property=og:title content="AguApp, encuentra fuentes en tu ciudad">
+  <meta property=og:image content=https://aguapp.nachbaur.dev/assets/icon.png>
+  <meta property=og:description content="AguApp es una aplicación gratuita que te ayudará a encontrar fuentes en tu ciudad.">
 </head>
 
 <body>
+  <nav class="wrapper">
+    <a href=/ class=main>AguApp</a>
+    <div class=spacer></div>
+    <a href=/help>Ayuda</a>
+    <a href=/help/code>Código</a>
+  </nav>
   <main class=wrapper>
-    <header>
+    <header class=main>
       <h1>AguApp</h1>
-      <span>Encuentra fuentes en tu ciudad</span>
+      <p>
+        <em>Encuentra fuentes en tu ciudad</em>.
+        <strong>AguApp</strong> es una aplicación gratuita para Android (y pronto iPhone)
+        que te ayudará a encontrar fuentes de agua de donde beber en tu ciudad.
+        Es de código abierto y toma los datos de
+        <a href=https://openstreetmap.org target=_blank>OpenStreetMap</a>, una
+        fuente de datos abierta.
+      </p>
+      <div class=downloads>
+        <a href=https://play.google.com/store/apps/details?id=mn.openlocations target=_blank>
+          Descarga para Android
+        </a>
+        <a>
+          Descarga para iPhone
+        </a>
+      </div>
     </header>
+
+    <h2>Ciudades disponibles</h2>
     <p>
-      <em>AguApp</em> es una aplicación gratuita para Android (y pronto iPhone)
-      que te ayudará a encontrar fuentes de agua de donde beber en tu ciudad.
-      Usa la fuente de datos abierta <a href=https://openstreetmap.org>OpenStreemMap</a>
-      y es de código abierto.
+      Poco a poco habrá más ciudades disponibles en <strong>AguApp</strong>.
+      Estas son las que hay ahora mismo:
+      <ul id="servers"></ul>
+      Si tienes interés en alguna ciudad puedes decírmelo con
+      <a href=https://forms.gle/j2UnB4Midb9f45jh6 target=_blank>este formulario</a>.
+    </p>
+    <h2 id=contribute>Contribuir</h2>
+    <p>
+      Puedes contribuir de varias formas a <strong>AguApp</strong>.
+      <ul>
+        <li>
+          <a href=/help/corregir>Añadir o corregir</a>
+          fuentes. Ayudarás a toda la comunidad de OpenStreetMap, no sólo a <strong>AguApp</strong>.
+        </li>
+        <li>Montar tu <a href=/help/host>propio servidor</a> de fuentes!</li>
+        <li>
+          Reportar bugs o ayudar a arreglar el
+          <a href=/help/code>el código</a>.
+        </li>
+        <li>
+          Enviarme una
+          <a href=https://mario.nachbaur.dev/tips?app=AguApp target=_blank>propina</a>.
+        </li>
+      </ul>
+    </p>
+    <h2>Autor</h2>
+    <p>
+      El proyecto ha sido desarrollado por
+      <a href=https://mario.nachbaur.dev target=_blank>Mario Nachbaur</a> con
+      mucha sed desde Sevilla, España.
     </p>
   </main>
+  <script type="module">
+    // Load known servers
+    const servers = await fetch("/servers.json").then(res => res.json());
+    document.getElementById("servers").innerHTML = servers
+      .sort((a, b) => a.name.localeCompare(b.name))
+      .map(server => `<li>${server.name}</li>`)
+      .join("");
+  </script>
 </body>
 </html>

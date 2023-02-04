@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang=es_ES>
+
+<head>
+  <meta charset=utf-8>
+  <meta name=viewport content="width=device-width, initial-scale=1.0">
+  <title>Corregir datos &mdash; AguApp</title>
+  <link href=/assets/icon.png rel=icon>
+  <link rel=stylesheet href=/style.css>
+</head>
+
+<body>
+  <nav class=wrapper>
+    <a href=/ class=main>AguApp</a>
+    <div class=spacer></div>
+    <a href=/help>Ayuda</a>
+    <a href=/help/code>Código</a>
+  </nav>
+  <main class=wrapper>
+    <header>
+      <h2>Corregir datos de AguApp</h2>
+    </header>
+    <p>
+      Los datos de <strong>AguApp</strong> son sacados de
+      <a href=https://openstreetmap.org target=_blank>OpenStreetMap</a>,
+      una "wikipedia" de mapas que cualquiera puede editar.
+    </p>
+    <p>
+      Si ves algún error en alguna fuente, puedes corregirla por tu cuenta y así
+      ayudarás a los demás!
+    </p>
+    <p>
+      Sólo tienes que ir a <a href=https://openstreetmap.org target=_blank>OpenStreetMap</a>,
+      crear una cuenta y ya podrás editar fuentes y otros elementos.
+    </p>
+  </main>
+  <script>
+    let lat, lng;
+    const query = window.location.search.substring(1);
+    for (const item of query.split('&')) {
+      const [name, value] = item.split('=');
+      if (name === 'lat') {
+        lat = value;
+      } else if (name == 'lng') {
+        lng = value;
+      }
+    }
+    if (lat && lng) {
+      const links = document.querySelectorAll("a[href='https://openstreetmap.org']");
+      for (const link of links) {
+        link.href += `#map=18/${lat}/${lng}`;
+      }
+    }
+  </script>
+</body>
+
+</html>

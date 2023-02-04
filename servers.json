@@ -1,5 +1,6 @@
 [
     {
+        "q": true,
         "name": "Sevilla, Andalucía, España",
         "address": "https://api.fountains.nachbaur.dev/sevilla"
     },
