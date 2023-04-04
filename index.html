@@ -44,14 +44,6 @@
         </a>
       </div>
     </header>
-
-    <h2>Ciudades disponibles</h2>
-    <p>
-      A partir de la versión 1.2.0, puedes buscar y añadir cualquier ciudad a
-      <strong>AguApp</strong>! Si sigues en la versión 1.1.0, estas son las
-      ciudades disponibles:
-      <ul id="servers"></ul>
-    </p>
     <h2 id=contribute>Contribuir</h2>
     <p>
       Puedes contribuir de varias formas a <strong>AguApp</strong>.
@@ -78,13 +70,5 @@
       mucha sed desde Sevilla, España.
     </p>
   </main>
-  <script type="module">
-    // Load known servers
-    const servers = await fetch("/servers.json").then(res => res.json());
-    document.getElementById("servers").innerHTML = servers
-      .sort((a, b) => a.name.localeCompare(b.name))
-      .map(server => `<li>${server.name}</li>`)
-      .join("");
-  </script>
 </body>
 </html>
