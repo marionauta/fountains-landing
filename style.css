@@ -4,8 +4,8 @@ body {
   --color--background: #e4ecef;
   background: var(--color--background);
   font: 20px sans-serif;
+  line-height: 1.4;
   margin: 1em;
-  scroll-behavior: smooth;
 }
 
 nav {
@@ -22,9 +22,7 @@ nav .main {
   text-decoration: none;
 }
 
-nav a:hover {
-  color: var(--color--accent);
-}
+nav a:hover { color: var(--color--accent) }
 
 .spacer { flex-grow: 1 }
 
@@ -33,9 +31,7 @@ nav a:hover {
   margin: 0 auto;
 }
 
-.wrapper:last-child {
-  margin-bottom: 10em;
-}
+.wrapper:last-child { margin-bottom: 10em }
 
 header.main {
   min-height: 70vh;
@@ -60,20 +56,16 @@ header h1 {
 }
 
 @media (max-width: 600px) {
-  .downloads { flex-direction: column; }
+  .downloads { flex-direction: column }
 }
 
 .downloads a:not([href]) { opacity: 0.5 }
 
-h1, h2, strong {
-  color: var(--color--accent-dark);
-}
+h1, h2, strong { color: var(--color--accent-dark) }
 
 a {
   color: var(--color--accent-dark);
   transition: .1s color;
 }
 
-a:hover {
-  color: var(--color--accent);
-}
+a:hover { color: var(--color--accent) }
