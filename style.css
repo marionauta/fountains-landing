@@ -59,8 +59,6 @@ header h1 {
   .downloads { flex-direction: column }
 }
 
-.downloads a:not([href]) { opacity: 0.5 }
-
 h1, h2, strong { color: var(--color--accent-dark) }
 
 a {
