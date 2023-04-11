@@ -1,0 +1,55 @@
+[
+  {
+    "id": "restrooms",
+    "title": "Show public restrooms too",
+    "localizedTitle": [
+      {
+        "language": "en",
+        "value": "Show public restrooms too"
+      },
+      {
+        "language": "es",
+        "value": "Mostrar baños públicos también"
+      }
+    ]
+  },
+  {
+    "id": "filters-bottle-wheelchair",
+    "title": "Add filters like bottle filling and wheelchair access",
+    "localizedTitle": [
+      {
+        "language": "en",
+        "value": "Add filters like bottle filling and wheelchair access"
+      },
+      {
+        "language": "es",
+        "value": "Añadir filtros como rellenado de botellas o acceso de sillas de ruedas"
+      }
+    ]
+  },
+  {
+    "id": "remove-areas",
+    "title": "Use a single map. Don't have to add areas.",
+    "description": "Complicated because of OpenStreetMap restrictions, but let's see.",
+    "localizedTitle": [
+      {
+        "language": "en",
+        "value": "Use a single map. Don't have to add locations."
+      },
+      {
+        "language": "es",
+        "value": "Usar un único mapa. No hay que añadir ubicaciones."
+      }
+    ],
+    "localizedDescription": [
+      {
+        "language": "en",
+        "value": "Complicated because of OpenStreetMap restrictions, but let's see."
+      },
+      {
+        "language": "es",
+        "value": "Complicado por restricciones de OpenStreetMap, pero ya veremos."
+      }
+    ]
+  }
+]
