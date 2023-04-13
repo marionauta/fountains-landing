@@ -31,6 +31,8 @@
     "id": "remove-areas",
     "title": "Use a single map. Don't have to add areas.",
     "description": "Complicated because of OpenStreetMap restrictions, but let's see.",
+    "status": "completed",
+    "isFinished": true,
     "localizedTitle": [
       {
         "language": "en",
@@ -49,6 +51,16 @@
       {
         "language": "es",
         "value": "Complicado por restricciones de OpenStreetMap, pero ya veremos."
+      }
+    ],
+    "localizedStatus": [
+      {
+        "language": "en",
+        "value": "completed"
+      },
+      {
+        "language": "es",
+        "value": "completado"
       }
     ]
   }
