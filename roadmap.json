@@ -2,6 +2,7 @@
   {
     "id": "restrooms",
     "title": "Show public restrooms too",
+    "status": "completed",
     "localizedTitle": [
       {
         "language": "en",
